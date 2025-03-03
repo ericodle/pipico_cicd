@@ -24,49 +24,19 @@ $ west update
 $ pip install -r zephyr/scripts/requirements.txt
 ```
 
-# Build the MCUBoot bootloader
-
-# Maybe later. No wifi on the rpi pico2
-
-```shell
-$ cd pipico_cicd/bootloader/
-$ ./build-boot.sh
-```
-
-# :hammer: build application for OTA
-
-To generate an image file for OTA updates, follow the steps below to build it,
-and then use the MCU client to flash the `build/zephyr/zephyr.signed.bin` file.
-
-```shell
-$ cd scsat1-rpi/pico
-$ rm -rf build && west build -b rpi_pico -- -DMCUBOOT=enable
-```
-
-# :hammer: build application without MCUBoot
-
-```
-$ cd scsat1-rpi/pico
-$ rm -rf build && west build -b rpi_pico
-```
-
-## Build Options
+# Build application
 
 using `UART1` for console
 ```
-$ cd scsat1-rpi/pico
-$ rm -rf build && west build -b rpi_pico -- -DCONSOLE=uart1
+$ cd pipico_cicd
+$ rm -rf build && west build -b rpi_pico2/rp2350a/m33 -- -DCONSOLE=uart1
 ```
 
-# :rocket: writing to Flash Memory
+# Write to flash memory
 
 > **Note**  
-> Connect arduino nano and PC while holding down the boolsel switch on nano
-
-`***` : RaspberryPi Pico device-name
+> Connect the pico2 while holding down the BOOTSEL to enable flashing
 
 ```shell
-$ west flash
-# or
-$ cp build/zephyr/zephyr.uf2 ***
+$ cp build/zephyr/zephyr.uf2 pico2_device_name
 ```
