@@ -1,0 +1,27 @@
+manifest:
+
+  projects:
+    - name: zephyr
+      url: https://github.com/zephyrproject-rtos/zephyr
+      revision: 43564e740450f6b5564c3d8709948ae6e5e83b50
+      path: zephyr
+      west-commands: scripts/west-commands.yml
+      import:
+        name-allowlist:
+          - cmsis
+          - hal_rpi_pico
+
+    - name: libcsp
+      url: https://github.com/libcsp/libcsp.git
+      revision: 63e1b05933cccdad5571bc51031c2e8c43b3987b
+      path: modules/lib/libcsp
+
+    - name: mcuboot
+      url: https://github.com/zephyrproject-rtos/mcuboot
+      revision: 346f7374ff4467e40b5594658f8ac67a5e9813c9
+      path: bootloader/mcuboot
+
+    - name: zcbor
+      url: https://github.com/zephyrproject-rtos/zcbor
+      revision: 9b07780aca6fb21f82a241ba386ad9b379809337
+      path: modules/lib/zcbor
