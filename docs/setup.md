@@ -1,4 +1,4 @@
-# install Zephyr SDK version 0.17.0
+# Install Zephyr SDK version 0.17.0
 
 Install Zephyr SDK
 
@@ -24,7 +24,7 @@ $ west update
 $ pip install -r zephyr/scripts/requirements.txt
 ```
 
-# :hammer: build bootloader
+# Build the MCUBoot bootloader
 
 Pico is equipped with MCUBoot to enable OTA updates from the Zero.
 First, build a bootloader based on MCUBoot and flash `build/zephyr/zephyr.uf2` file to the target device by following the instructions in `Writing to Flash Memory`.
