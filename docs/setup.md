@@ -26,12 +26,10 @@ $ pip install -r zephyr/scripts/requirements.txt
 
 # Build the MCUBoot bootloader
 
-Pico is equipped with MCUBoot to enable OTA updates from the Zero.
-First, build a bootloader based on MCUBoot and flash `build/zephyr/zephyr.uf2` file to the target device by following the instructions in `Writing to Flash Memory`.
-If you do not require OTA updates, this step is unnecessary.
+# Maybe later. No wifi on the rpi pico2
 
 ```shell
-$ cd scsat1-rpi/pico/bootloader/
+$ cd pipico_cicd/bootloader/
 $ ./build-boot.sh
 ```
 
