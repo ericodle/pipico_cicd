@@ -35,7 +35,7 @@ west init -m https://github.com/ericodle/pipico_cicd --mr main my-workspace
 cd my-workspace
 west update
 cd pipico_cicd
-west build -b rpi_pico2/rp2350a/m33 app
+west build -b rpi_pico2/rp2350a/m33
 ```
 
 # Build application
