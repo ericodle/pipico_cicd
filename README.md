@@ -38,6 +38,12 @@ cd pipico_cicd
 west build -b rpi_pico2/rp2350a/m33
 ```
 
+# Run Twister tests
+
+```shell
+west twister -T tests
+```
+
 # Build application
 
 using `UART1` for console
