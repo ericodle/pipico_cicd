@@ -10,6 +10,6 @@ cd $BASEDIR || exit 1
 
 rm -rf build
 
-west build -b rpi_pico ../../../bootloader/mcuboot/boot/zephyr \
-           -- -DDTC_OVERLAY_FILE="$BASEDIR"/rpi_pico.overlay \
-              -DOVERLAY_CONFIG="$BASEDIR"/rpi_pico.conf
+west build -b rpi_pico2/rp2350a/m33 ../../../bootloader/mcuboot/boot/zephyr \
+           -- -DDTC_OVERLAY_FILE="$BASEDIR"/rpi_pico2/rp2350a/m33.overlay \
+              -DOVERLAY_CONFIG="$BASEDIR"/rpi_pico2/rp2350a/m33.conf

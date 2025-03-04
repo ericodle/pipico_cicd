@@ -4,7 +4,7 @@ tests:
   sample.console-echo:
     build_only: true
     platform_allow:
-      - rpi_pico
+      - rpi_pico2/rp2350a/m33
     tags:
       - uart
       - usb_device

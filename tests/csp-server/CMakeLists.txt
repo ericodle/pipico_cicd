@@ -2,7 +2,7 @@
 
 cmake_minimum_required(VERSION 3.20.0)
 
-set(BOARD rpi_pico)
+set(BOARD rpi_pico2/rp2350a/m33)
 
 if (ALLOW_DEBUG)
     list(APPEND EXTRA_CONF_FILE "debug.conf")
